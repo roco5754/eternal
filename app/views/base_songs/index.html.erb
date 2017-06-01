@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Base Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @base_songs.each do |base_song| %>
+      <tr>
+        <td><%= base_song.title %></td>
+        <td><%= link_to 'Show', base_song %></td>
+        <td><%= link_to 'Edit', edit_base_song_path(base_song) %></td>
+        <td><%= link_to 'Destroy', base_song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Base song', new_base_song_path %>
