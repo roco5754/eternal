@@ -1,4 +1,4 @@
 class Collection < ActiveRecord::Base
-  belongs_to :Artist
-  has_many :base_songs
+  belongs_to :artist
+  has_many :base_songs , -> { order(position: :asc) }
 end
