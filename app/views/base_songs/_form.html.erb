@@ -14,8 +14,8 @@
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
-    <%= f.collection_select :artist, Artist.order(:name),:id,:name, include_blank: true %>
-    <%= f.collection_select :collection, Collection.order(:title),:id,:title, include_blank: true %>
+    <!-- <%= f.collection_select :artist, Artist.order(:name),:id,:name, include_blank: true %> -->
+    <%= f.collection_select :collection_id, Collection.order(:title),:id,:title, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
